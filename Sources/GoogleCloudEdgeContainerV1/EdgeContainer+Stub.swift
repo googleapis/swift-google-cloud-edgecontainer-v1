@@ -28,11 +28,11 @@ extension Clients {
   protocol EdgeContainerStub {
     func listClusters(
       request: ListClustersRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListClustersResponse
+    ) async throws -> GoogleCloudEdgeContainerV1.ListClustersResponse
 
     func getCluster(
       request: GetClusterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.Cluster
+    ) async throws -> GoogleCloudEdgeContainerV1.Cluster
 
     func createCluster(
       request: CreateClusterRequest, options: GoogleCloudGax.RequestOptions
@@ -52,19 +52,19 @@ extension Clients {
 
     func generateAccessToken(
       request: GenerateAccessTokenRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.GenerateAccessTokenResponse
+    ) async throws -> GoogleCloudEdgeContainerV1.GenerateAccessTokenResponse
 
     func generateOfflineCredential(
       request: GenerateOfflineCredentialRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.GenerateOfflineCredentialResponse
+    ) async throws -> GoogleCloudEdgeContainerV1.GenerateOfflineCredentialResponse
 
     func listNodePools(
       request: ListNodePoolsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListNodePoolsResponse
+    ) async throws -> GoogleCloudEdgeContainerV1.ListNodePoolsResponse
 
     func getNodePool(
       request: GetNodePoolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.NodePool
+    ) async throws -> GoogleCloudEdgeContainerV1.NodePool
 
     func createNodePool(
       request: CreateNodePoolRequest, options: GoogleCloudGax.RequestOptions
@@ -80,19 +80,19 @@ extension Clients {
 
     func listMachines(
       request: ListMachinesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListMachinesResponse
+    ) async throws -> GoogleCloudEdgeContainerV1.ListMachinesResponse
 
     func getMachine(
       request: GetMachineRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.Machine
+    ) async throws -> GoogleCloudEdgeContainerV1.Machine
 
     func listVpnConnections(
       request: ListVpnConnectionsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListVpnConnectionsResponse
+    ) async throws -> GoogleCloudEdgeContainerV1.ListVpnConnectionsResponse
 
     func getVpnConnection(
       request: GetVpnConnectionRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.VpnConnection
+    ) async throws -> GoogleCloudEdgeContainerV1.VpnConnection
 
     func createVpnConnection(
       request: CreateVpnConnectionRequest, options: GoogleCloudGax.RequestOptions
@@ -104,7 +104,7 @@ extension Clients {
 
     func getServerConfig(
       request: GetServerConfigRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ServerConfig
+    ) async throws -> GoogleCloudEdgeContainerV1.ServerConfig
 
     func listLocations(
       request: GoogleCloudLocation.ListLocationsRequest, options: GoogleCloudGax.RequestOptions
@@ -141,7 +141,7 @@ extension Clients {
 
     public func listClusters(
       request: ListClustersRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListClustersResponse {
+    ) async throws -> GoogleCloudEdgeContainerV1.ListClustersResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -161,12 +161,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudEdgecontainerV1.ListClustersResponse.self, from: data)
+        GoogleCloudEdgeContainerV1.ListClustersResponse.self, from: data)
     }
 
     public func getCluster(
       request: GetClusterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.Cluster {
+    ) async throws -> GoogleCloudEdgeContainerV1.Cluster {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -181,7 +181,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudEdgecontainerV1.Cluster.self, from: data)
+        GoogleCloudEdgeContainerV1.Cluster.self, from: data)
     }
 
     public func createCluster(
@@ -284,7 +284,7 @@ extension Clients {
 
     public func generateAccessToken(
       request: GenerateAccessTokenRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.GenerateAccessTokenResponse {
+    ) async throws -> GoogleCloudEdgeContainerV1.GenerateAccessTokenResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.cluster as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.cluster' is not set or is empty")
@@ -299,12 +299,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudEdgecontainerV1.GenerateAccessTokenResponse.self, from: data)
+        GoogleCloudEdgeContainerV1.GenerateAccessTokenResponse.self, from: data)
     }
 
     public func generateOfflineCredential(
       request: GenerateOfflineCredentialRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.GenerateOfflineCredentialResponse {
+    ) async throws -> GoogleCloudEdgeContainerV1.GenerateOfflineCredentialResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.cluster as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.cluster' is not set or is empty")
@@ -319,12 +319,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudEdgecontainerV1.GenerateOfflineCredentialResponse.self, from: data)
+        GoogleCloudEdgeContainerV1.GenerateOfflineCredentialResponse.self, from: data)
     }
 
     public func listNodePools(
       request: ListNodePoolsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListNodePoolsResponse {
+    ) async throws -> GoogleCloudEdgeContainerV1.ListNodePoolsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -344,12 +344,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudEdgecontainerV1.ListNodePoolsResponse.self, from: data)
+        GoogleCloudEdgeContainerV1.ListNodePoolsResponse.self, from: data)
     }
 
     public func getNodePool(
       request: GetNodePoolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.NodePool {
+    ) async throws -> GoogleCloudEdgeContainerV1.NodePool {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -364,7 +364,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudEdgecontainerV1.NodePool.self, from: data)
+        GoogleCloudEdgeContainerV1.NodePool.self, from: data)
     }
 
     public func createNodePool(
@@ -446,7 +446,7 @@ extension Clients {
 
     public func listMachines(
       request: ListMachinesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListMachinesResponse {
+    ) async throws -> GoogleCloudEdgeContainerV1.ListMachinesResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -466,12 +466,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudEdgecontainerV1.ListMachinesResponse.self, from: data)
+        GoogleCloudEdgeContainerV1.ListMachinesResponse.self, from: data)
     }
 
     public func getMachine(
       request: GetMachineRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.Machine {
+    ) async throws -> GoogleCloudEdgeContainerV1.Machine {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -486,12 +486,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudEdgecontainerV1.Machine.self, from: data)
+        GoogleCloudEdgeContainerV1.Machine.self, from: data)
     }
 
     public func listVpnConnections(
       request: ListVpnConnectionsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListVpnConnectionsResponse {
+    ) async throws -> GoogleCloudEdgeContainerV1.ListVpnConnectionsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -511,12 +511,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudEdgecontainerV1.ListVpnConnectionsResponse.self, from: data)
+        GoogleCloudEdgeContainerV1.ListVpnConnectionsResponse.self, from: data)
     }
 
     public func getVpnConnection(
       request: GetVpnConnectionRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.VpnConnection {
+    ) async throws -> GoogleCloudEdgeContainerV1.VpnConnection {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -531,7 +531,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudEdgecontainerV1.VpnConnection.self, from: data)
+        GoogleCloudEdgeContainerV1.VpnConnection.self, from: data)
     }
 
     public func createVpnConnection(
@@ -586,7 +586,7 @@ extension Clients {
 
     public func getServerConfig(
       request: GetServerConfigRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ServerConfig {
+    ) async throws -> GoogleCloudEdgeContainerV1.ServerConfig {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -601,7 +601,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudEdgecontainerV1.ServerConfig.self, from: data)
+        GoogleCloudEdgeContainerV1.ServerConfig.self, from: data)
     }
 
     public func listLocations(

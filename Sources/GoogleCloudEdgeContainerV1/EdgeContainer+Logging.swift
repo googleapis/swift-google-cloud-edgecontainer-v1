@@ -61,14 +61,14 @@ extension Clients {
 
     public func listClusters(
       request: ListClustersRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListClustersResponse {
+    ) async throws -> GoogleCloudEdgeContainerV1.ListClustersResponse {
       try await self._intercept(
         request: request,
         options: options,
         name: "listClusters",
         action: {
           (r: ListClustersRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudEdgecontainerV1.ListClustersResponse
+            -> GoogleCloudEdgeContainerV1.ListClustersResponse
           in
           return try await self.inner.listClusters(request: r, options: o)
         })
@@ -76,14 +76,14 @@ extension Clients {
 
     public func getCluster(
       request: GetClusterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.Cluster {
+    ) async throws -> GoogleCloudEdgeContainerV1.Cluster {
       try await self._intercept(
         request: request,
         options: options,
         name: "getCluster",
         action: {
           (r: GetClusterRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudEdgecontainerV1.Cluster
+            -> GoogleCloudEdgeContainerV1.Cluster
           in
           return try await self.inner.getCluster(request: r, options: o)
         })
@@ -151,14 +151,14 @@ extension Clients {
 
     public func generateAccessToken(
       request: GenerateAccessTokenRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.GenerateAccessTokenResponse {
+    ) async throws -> GoogleCloudEdgeContainerV1.GenerateAccessTokenResponse {
       try await self._intercept(
         request: request,
         options: options,
         name: "generateAccessToken",
         action: {
           (r: GenerateAccessTokenRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudEdgecontainerV1.GenerateAccessTokenResponse
+            -> GoogleCloudEdgeContainerV1.GenerateAccessTokenResponse
           in
           return try await self.inner.generateAccessToken(request: r, options: o)
         })
@@ -166,14 +166,14 @@ extension Clients {
 
     public func generateOfflineCredential(
       request: GenerateOfflineCredentialRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.GenerateOfflineCredentialResponse {
+    ) async throws -> GoogleCloudEdgeContainerV1.GenerateOfflineCredentialResponse {
       try await self._intercept(
         request: request,
         options: options,
         name: "generateOfflineCredential",
         action: {
           (r: GenerateOfflineCredentialRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudEdgecontainerV1.GenerateOfflineCredentialResponse
+            -> GoogleCloudEdgeContainerV1.GenerateOfflineCredentialResponse
           in
           return try await self.inner.generateOfflineCredential(request: r, options: o)
         })
@@ -181,14 +181,14 @@ extension Clients {
 
     public func listNodePools(
       request: ListNodePoolsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListNodePoolsResponse {
+    ) async throws -> GoogleCloudEdgeContainerV1.ListNodePoolsResponse {
       try await self._intercept(
         request: request,
         options: options,
         name: "listNodePools",
         action: {
           (r: ListNodePoolsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudEdgecontainerV1.ListNodePoolsResponse
+            -> GoogleCloudEdgeContainerV1.ListNodePoolsResponse
           in
           return try await self.inner.listNodePools(request: r, options: o)
         })
@@ -196,14 +196,14 @@ extension Clients {
 
     public func getNodePool(
       request: GetNodePoolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.NodePool {
+    ) async throws -> GoogleCloudEdgeContainerV1.NodePool {
       try await self._intercept(
         request: request,
         options: options,
         name: "getNodePool",
         action: {
           (r: GetNodePoolRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudEdgecontainerV1.NodePool
+            -> GoogleCloudEdgeContainerV1.NodePool
           in
           return try await self.inner.getNodePool(request: r, options: o)
         })
@@ -256,14 +256,14 @@ extension Clients {
 
     public func listMachines(
       request: ListMachinesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListMachinesResponse {
+    ) async throws -> GoogleCloudEdgeContainerV1.ListMachinesResponse {
       try await self._intercept(
         request: request,
         options: options,
         name: "listMachines",
         action: {
           (r: ListMachinesRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudEdgecontainerV1.ListMachinesResponse
+            -> GoogleCloudEdgeContainerV1.ListMachinesResponse
           in
           return try await self.inner.listMachines(request: r, options: o)
         })
@@ -271,14 +271,14 @@ extension Clients {
 
     public func getMachine(
       request: GetMachineRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.Machine {
+    ) async throws -> GoogleCloudEdgeContainerV1.Machine {
       try await self._intercept(
         request: request,
         options: options,
         name: "getMachine",
         action: {
           (r: GetMachineRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudEdgecontainerV1.Machine
+            -> GoogleCloudEdgeContainerV1.Machine
           in
           return try await self.inner.getMachine(request: r, options: o)
         })
@@ -286,14 +286,14 @@ extension Clients {
 
     public func listVpnConnections(
       request: ListVpnConnectionsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListVpnConnectionsResponse {
+    ) async throws -> GoogleCloudEdgeContainerV1.ListVpnConnectionsResponse {
       try await self._intercept(
         request: request,
         options: options,
         name: "listVpnConnections",
         action: {
           (r: ListVpnConnectionsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudEdgecontainerV1.ListVpnConnectionsResponse
+            -> GoogleCloudEdgeContainerV1.ListVpnConnectionsResponse
           in
           return try await self.inner.listVpnConnections(request: r, options: o)
         })
@@ -301,14 +301,14 @@ extension Clients {
 
     public func getVpnConnection(
       request: GetVpnConnectionRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.VpnConnection {
+    ) async throws -> GoogleCloudEdgeContainerV1.VpnConnection {
       try await self._intercept(
         request: request,
         options: options,
         name: "getVpnConnection",
         action: {
           (r: GetVpnConnectionRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudEdgecontainerV1.VpnConnection
+            -> GoogleCloudEdgeContainerV1.VpnConnection
           in
           return try await self.inner.getVpnConnection(request: r, options: o)
         })
@@ -346,14 +346,14 @@ extension Clients {
 
     public func getServerConfig(
       request: GetServerConfigRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ServerConfig {
+    ) async throws -> GoogleCloudEdgeContainerV1.ServerConfig {
       try await self._intercept(
         request: request,
         options: options,
         name: "getServerConfig",
         action: {
           (r: GetServerConfigRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudEdgecontainerV1.ServerConfig
+            -> GoogleCloudEdgeContainerV1.ServerConfig
           in
           return try await self.inner.getServerConfig(request: r, options: o)
         })

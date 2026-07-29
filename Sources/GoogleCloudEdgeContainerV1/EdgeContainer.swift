@@ -46,7 +46,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
   /// @Snippet(path: "EdgeContainer_ListClusters")
   public func listClusters(
     request: ListClustersRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.ListClustersResponse {
+  ) async throws -> GoogleCloudEdgeContainerV1.ListClustersResponse {
     try await self.inner.listClusters(request: request, options: options)
   }
 
@@ -57,7 +57,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
     byItem: ListClustersRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Cluster, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudEdgecontainerV1.ListClustersResponse in
+      (token: Swift.String) async throws -> GoogleCloudEdgeContainerV1.ListClustersResponse in
       var request = byItem
       request.pageToken = token
       return try await self.listClusters(request: request, options: options)
@@ -70,7 +70,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
   /// @Snippet(path: "EdgeContainer_GetCluster")
   public func getCluster(
     request: GetClusterRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.Cluster {
+  ) async throws -> GoogleCloudEdgeContainerV1.Cluster {
     try await self.inner.getCluster(request: request, options: options)
   }
 
@@ -323,7 +323,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
   /// @Snippet(path: "EdgeContainer_GenerateAccessToken")
   public func generateAccessToken(
     request: GenerateAccessTokenRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.GenerateAccessTokenResponse {
+  ) async throws -> GoogleCloudEdgeContainerV1.GenerateAccessTokenResponse {
     try await self.inner.generateAccessToken(request: request, options: options)
   }
 
@@ -332,7 +332,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
   /// @Snippet(path: "EdgeContainer_GenerateOfflineCredential")
   public func generateOfflineCredential(
     request: GenerateOfflineCredentialRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.GenerateOfflineCredentialResponse {
+  ) async throws -> GoogleCloudEdgeContainerV1.GenerateOfflineCredentialResponse {
     try await self.inner.generateOfflineCredential(request: request, options: options)
   }
 
@@ -341,7 +341,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
   /// @Snippet(path: "EdgeContainer_ListNodePools")
   public func listNodePools(
     request: ListNodePoolsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.ListNodePoolsResponse {
+  ) async throws -> GoogleCloudEdgeContainerV1.ListNodePoolsResponse {
     try await self.inner.listNodePools(request: request, options: options)
   }
 
@@ -352,7 +352,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
     byItem: ListNodePoolsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<NodePool, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudEdgecontainerV1.ListNodePoolsResponse in
+      (token: Swift.String) async throws -> GoogleCloudEdgeContainerV1.ListNodePoolsResponse in
       var request = byItem
       request.pageToken = token
       return try await self.listNodePools(request: request, options: options)
@@ -365,7 +365,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
   /// @Snippet(path: "EdgeContainer_GetNodePool")
   public func getNodePool(
     request: GetNodePoolRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.NodePool {
+  ) async throws -> GoogleCloudEdgeContainerV1.NodePool {
     try await self.inner.getNodePool(request: request, options: options)
   }
 
@@ -555,7 +555,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
   /// @Snippet(path: "EdgeContainer_ListMachines")
   public func listMachines(
     request: ListMachinesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.ListMachinesResponse {
+  ) async throws -> GoogleCloudEdgeContainerV1.ListMachinesResponse {
     try await self.inner.listMachines(request: request, options: options)
   }
 
@@ -566,7 +566,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
     byItem: ListMachinesRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Machine, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudEdgecontainerV1.ListMachinesResponse in
+      (token: Swift.String) async throws -> GoogleCloudEdgeContainerV1.ListMachinesResponse in
       var request = byItem
       request.pageToken = token
       return try await self.listMachines(request: request, options: options)
@@ -579,7 +579,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
   /// @Snippet(path: "EdgeContainer_GetMachine")
   public func getMachine(
     request: GetMachineRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.Machine {
+  ) async throws -> GoogleCloudEdgeContainerV1.Machine {
     try await self.inner.getMachine(request: request, options: options)
   }
 
@@ -588,7 +588,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
   /// @Snippet(path: "EdgeContainer_ListVpnConnections")
   public func listVpnConnections(
     request: ListVpnConnectionsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.ListVpnConnectionsResponse {
+  ) async throws -> GoogleCloudEdgeContainerV1.ListVpnConnectionsResponse {
     try await self.inner.listVpnConnections(request: request, options: options)
   }
 
@@ -599,7 +599,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
     byItem: ListVpnConnectionsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<VpnConnection, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudEdgecontainerV1.ListVpnConnectionsResponse in
+      (token: Swift.String) async throws -> GoogleCloudEdgeContainerV1.ListVpnConnectionsResponse in
       var request = byItem
       request.pageToken = token
       return try await self.listVpnConnections(request: request, options: options)
@@ -612,7 +612,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
   /// @Snippet(path: "EdgeContainer_GetVpnConnection")
   public func getVpnConnection(
     request: GetVpnConnectionRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.VpnConnection {
+  ) async throws -> GoogleCloudEdgeContainerV1.VpnConnection {
     try await self.inner.getVpnConnection(request: request, options: options)
   }
 
@@ -739,7 +739,7 @@ public class EdgeContainerClient: Clients.EdgeContainerProtocol {
   /// @Snippet(path: "EdgeContainer_GetServerConfig")
   public func getServerConfig(
     request: GetServerConfigRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.ServerConfig {
+  ) async throws -> GoogleCloudEdgeContainerV1.ServerConfig {
     try await self.inner.getServerConfig(request: request, options: options)
   }
 
@@ -847,7 +847,7 @@ extension Clients {
   public protocol EdgeContainerProtocol {
     /// See `EdgeContainerClient.listClusters`.
     func listClusters(request: ListClustersRequest) async throws
-      -> GoogleCloudEdgecontainerV1.ListClustersResponse
+      -> GoogleCloudEdgeContainerV1.ListClustersResponse
 
     /// See `EdgeContainerClient.listClusters`.
     func listClusters(
@@ -860,12 +860,12 @@ extension Clients {
     ) throws -> any AsyncSequence<Cluster, Swift.Error>
 
     /// See `EdgeContainerClient.getCluster`.
-    func getCluster(request: GetClusterRequest) async throws -> GoogleCloudEdgecontainerV1.Cluster
+    func getCluster(request: GetClusterRequest) async throws -> GoogleCloudEdgeContainerV1.Cluster
 
     /// See `EdgeContainerClient.getCluster`.
     func getCluster(
       name: Swift.String,
-    ) async throws -> GoogleCloudEdgecontainerV1.Cluster
+    ) async throws -> GoogleCloudEdgeContainerV1.Cluster
 
     /// See `EdgeContainerClient.createCluster`.
     func createCluster(request: CreateClusterRequest) async throws -> GoogleLongrunning.Operation
@@ -922,25 +922,25 @@ extension Clients {
 
     /// See `EdgeContainerClient.generateAccessToken`.
     func generateAccessToken(request: GenerateAccessTokenRequest) async throws
-      -> GoogleCloudEdgecontainerV1.GenerateAccessTokenResponse
+      -> GoogleCloudEdgeContainerV1.GenerateAccessTokenResponse
 
     /// See `EdgeContainerClient.generateAccessToken`.
     func generateAccessToken(
       cluster: Swift.String,
-    ) async throws -> GoogleCloudEdgecontainerV1.GenerateAccessTokenResponse
+    ) async throws -> GoogleCloudEdgeContainerV1.GenerateAccessTokenResponse
 
     /// See `EdgeContainerClient.generateOfflineCredential`.
     func generateOfflineCredential(request: GenerateOfflineCredentialRequest) async throws
-      -> GoogleCloudEdgecontainerV1.GenerateOfflineCredentialResponse
+      -> GoogleCloudEdgeContainerV1.GenerateOfflineCredentialResponse
 
     /// See `EdgeContainerClient.generateOfflineCredential`.
     func generateOfflineCredential(
       cluster: Swift.String,
-    ) async throws -> GoogleCloudEdgecontainerV1.GenerateOfflineCredentialResponse
+    ) async throws -> GoogleCloudEdgeContainerV1.GenerateOfflineCredentialResponse
 
     /// See `EdgeContainerClient.listNodePools`.
     func listNodePools(request: ListNodePoolsRequest) async throws
-      -> GoogleCloudEdgecontainerV1.ListNodePoolsResponse
+      -> GoogleCloudEdgeContainerV1.ListNodePoolsResponse
 
     /// See `EdgeContainerClient.listNodePools`.
     func listNodePools(
@@ -954,12 +954,12 @@ extension Clients {
 
     /// See `EdgeContainerClient.getNodePool`.
     func getNodePool(request: GetNodePoolRequest) async throws
-      -> GoogleCloudEdgecontainerV1.NodePool
+      -> GoogleCloudEdgeContainerV1.NodePool
 
     /// See `EdgeContainerClient.getNodePool`.
     func getNodePool(
       name: Swift.String,
-    ) async throws -> GoogleCloudEdgecontainerV1.NodePool
+    ) async throws -> GoogleCloudEdgeContainerV1.NodePool
 
     /// See `EdgeContainerClient.createNodePool`.
     func createNodePool(request: CreateNodePoolRequest) async throws -> GoogleLongrunning.Operation
@@ -1002,7 +1002,7 @@ extension Clients {
 
     /// See `EdgeContainerClient.listMachines`.
     func listMachines(request: ListMachinesRequest) async throws
-      -> GoogleCloudEdgecontainerV1.ListMachinesResponse
+      -> GoogleCloudEdgeContainerV1.ListMachinesResponse
 
     /// See `EdgeContainerClient.listMachines`.
     func listMachines(
@@ -1015,16 +1015,16 @@ extension Clients {
     ) throws -> any AsyncSequence<Machine, Swift.Error>
 
     /// See `EdgeContainerClient.getMachine`.
-    func getMachine(request: GetMachineRequest) async throws -> GoogleCloudEdgecontainerV1.Machine
+    func getMachine(request: GetMachineRequest) async throws -> GoogleCloudEdgeContainerV1.Machine
 
     /// See `EdgeContainerClient.getMachine`.
     func getMachine(
       name: Swift.String,
-    ) async throws -> GoogleCloudEdgecontainerV1.Machine
+    ) async throws -> GoogleCloudEdgeContainerV1.Machine
 
     /// See `EdgeContainerClient.listVpnConnections`.
     func listVpnConnections(request: ListVpnConnectionsRequest) async throws
-      -> GoogleCloudEdgecontainerV1.ListVpnConnectionsResponse
+      -> GoogleCloudEdgeContainerV1.ListVpnConnectionsResponse
 
     /// See `EdgeContainerClient.listVpnConnections`.
     func listVpnConnections(
@@ -1038,12 +1038,12 @@ extension Clients {
 
     /// See `EdgeContainerClient.getVpnConnection`.
     func getVpnConnection(request: GetVpnConnectionRequest) async throws
-      -> GoogleCloudEdgecontainerV1.VpnConnection
+      -> GoogleCloudEdgeContainerV1.VpnConnection
 
     /// See `EdgeContainerClient.getVpnConnection`.
     func getVpnConnection(
       name: Swift.String,
-    ) async throws -> GoogleCloudEdgecontainerV1.VpnConnection
+    ) async throws -> GoogleCloudEdgeContainerV1.VpnConnection
 
     /// See `EdgeContainerClient.createVpnConnection`.
     func createVpnConnection(request: CreateVpnConnectionRequest) async throws
@@ -1075,12 +1075,12 @@ extension Clients {
 
     /// See `EdgeContainerClient.getServerConfig`.
     func getServerConfig(request: GetServerConfigRequest) async throws
-      -> GoogleCloudEdgecontainerV1.ServerConfig
+      -> GoogleCloudEdgeContainerV1.ServerConfig
 
     /// See `EdgeContainerClient.getServerConfig`.
     func getServerConfig(
       name: Swift.String,
-    ) async throws -> GoogleCloudEdgecontainerV1.ServerConfig
+    ) async throws -> GoogleCloudEdgeContainerV1.ServerConfig
 
     /// See `EdgeContainerClient.listLocations`.
     func listLocations(request: GoogleCloudLocation.ListLocationsRequest) async throws
@@ -1129,7 +1129,7 @@ extension Clients {
     /// See `EdgeContainerClient.listClusters`.
     func listClusters(
       request: ListClustersRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListClustersResponse
+    ) async throws -> GoogleCloudEdgeContainerV1.ListClustersResponse
 
     /// See `EdgeContainerClient.listClusters`.
     func listClusters(
@@ -1139,7 +1139,7 @@ extension Clients {
     /// See `EdgeContainerClient.getCluster`.
     func getCluster(
       request: GetClusterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.Cluster
+    ) async throws -> GoogleCloudEdgeContainerV1.Cluster
 
     /// See `EdgeContainerClient.createCluster`.
     func createCluster(
@@ -1184,17 +1184,17 @@ extension Clients {
     /// See `EdgeContainerClient.generateAccessToken`.
     func generateAccessToken(
       request: GenerateAccessTokenRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.GenerateAccessTokenResponse
+    ) async throws -> GoogleCloudEdgeContainerV1.GenerateAccessTokenResponse
 
     /// See `EdgeContainerClient.generateOfflineCredential`.
     func generateOfflineCredential(
       request: GenerateOfflineCredentialRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.GenerateOfflineCredentialResponse
+    ) async throws -> GoogleCloudEdgeContainerV1.GenerateOfflineCredentialResponse
 
     /// See `EdgeContainerClient.listNodePools`.
     func listNodePools(
       request: ListNodePoolsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListNodePoolsResponse
+    ) async throws -> GoogleCloudEdgeContainerV1.ListNodePoolsResponse
 
     /// See `EdgeContainerClient.listNodePools`.
     func listNodePools(
@@ -1204,7 +1204,7 @@ extension Clients {
     /// See `EdgeContainerClient.getNodePool`.
     func getNodePool(
       request: GetNodePoolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.NodePool
+    ) async throws -> GoogleCloudEdgeContainerV1.NodePool
 
     /// See `EdgeContainerClient.createNodePool`.
     func createNodePool(
@@ -1239,7 +1239,7 @@ extension Clients {
     /// See `EdgeContainerClient.listMachines`.
     func listMachines(
       request: ListMachinesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListMachinesResponse
+    ) async throws -> GoogleCloudEdgeContainerV1.ListMachinesResponse
 
     /// See `EdgeContainerClient.listMachines`.
     func listMachines(
@@ -1249,12 +1249,12 @@ extension Clients {
     /// See `EdgeContainerClient.getMachine`.
     func getMachine(
       request: GetMachineRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.Machine
+    ) async throws -> GoogleCloudEdgeContainerV1.Machine
 
     /// See `EdgeContainerClient.listVpnConnections`.
     func listVpnConnections(
       request: ListVpnConnectionsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ListVpnConnectionsResponse
+    ) async throws -> GoogleCloudEdgeContainerV1.ListVpnConnectionsResponse
 
     /// See `EdgeContainerClient.listVpnConnections`.
     func listVpnConnections(
@@ -1264,7 +1264,7 @@ extension Clients {
     /// See `EdgeContainerClient.getVpnConnection`.
     func getVpnConnection(
       request: GetVpnConnectionRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.VpnConnection
+    ) async throws -> GoogleCloudEdgeContainerV1.VpnConnection
 
     /// See `EdgeContainerClient.createVpnConnection`.
     func createVpnConnection(
@@ -1289,7 +1289,7 @@ extension Clients {
     /// See `EdgeContainerClient.getServerConfig`.
     func getServerConfig(
       request: GetServerConfigRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudEdgecontainerV1.ServerConfig
+    ) async throws -> GoogleCloudEdgeContainerV1.ServerConfig
 
     /// See `EdgeContainerClient.listLocations`.
     func listLocations(
@@ -1331,14 +1331,14 @@ extension Clients {
 // Default implementations
 extension Clients.EdgeContainerProtocol {
   public func listClusters(request: ListClustersRequest) async throws
-    -> GoogleCloudEdgecontainerV1.ListClustersResponse
+    -> GoogleCloudEdgeContainerV1.ListClustersResponse
   {
     try await self.listClusters(request: request, options: .init())
   }
 
   public func listClusters(
     request: ListClustersRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.ListClustersResponse {
+  ) async throws -> GoogleCloudEdgeContainerV1.ListClustersResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1352,7 +1352,7 @@ extension Clients.EdgeContainerProtocol {
     byItem: ListClustersRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Cluster, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudEdgecontainerV1.ListClustersResponse in
+      (token: Swift.String) async throws -> GoogleCloudEdgeContainerV1.ListClustersResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
@@ -1368,20 +1368,20 @@ extension Clients.EdgeContainerProtocol {
   }
 
   public func getCluster(request: GetClusterRequest) async throws
-    -> GoogleCloudEdgecontainerV1.Cluster
+    -> GoogleCloudEdgeContainerV1.Cluster
   {
     try await self.getCluster(request: request, options: .init())
   }
 
   public func getCluster(
     request: GetClusterRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.Cluster {
+  ) async throws -> GoogleCloudEdgeContainerV1.Cluster {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getCluster(
     name: Swift.String,
-  ) async throws -> GoogleCloudEdgecontainerV1.Cluster {
+  ) async throws -> GoogleCloudEdgeContainerV1.Cluster {
     let request = GetClusterRequest().with {
       $0.name = name
     }
@@ -1547,20 +1547,20 @@ extension Clients.EdgeContainerProtocol {
   }
 
   public func generateAccessToken(request: GenerateAccessTokenRequest) async throws
-    -> GoogleCloudEdgecontainerV1.GenerateAccessTokenResponse
+    -> GoogleCloudEdgeContainerV1.GenerateAccessTokenResponse
   {
     try await self.generateAccessToken(request: request, options: .init())
   }
 
   public func generateAccessToken(
     request: GenerateAccessTokenRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.GenerateAccessTokenResponse {
+  ) async throws -> GoogleCloudEdgeContainerV1.GenerateAccessTokenResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func generateAccessToken(
     cluster: Swift.String,
-  ) async throws -> GoogleCloudEdgecontainerV1.GenerateAccessTokenResponse {
+  ) async throws -> GoogleCloudEdgeContainerV1.GenerateAccessTokenResponse {
     let request = GenerateAccessTokenRequest().with {
       $0.cluster = cluster
     }
@@ -1568,20 +1568,20 @@ extension Clients.EdgeContainerProtocol {
   }
 
   public func generateOfflineCredential(request: GenerateOfflineCredentialRequest) async throws
-    -> GoogleCloudEdgecontainerV1.GenerateOfflineCredentialResponse
+    -> GoogleCloudEdgeContainerV1.GenerateOfflineCredentialResponse
   {
     try await self.generateOfflineCredential(request: request, options: .init())
   }
 
   public func generateOfflineCredential(
     request: GenerateOfflineCredentialRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.GenerateOfflineCredentialResponse {
+  ) async throws -> GoogleCloudEdgeContainerV1.GenerateOfflineCredentialResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func generateOfflineCredential(
     cluster: Swift.String,
-  ) async throws -> GoogleCloudEdgecontainerV1.GenerateOfflineCredentialResponse {
+  ) async throws -> GoogleCloudEdgeContainerV1.GenerateOfflineCredentialResponse {
     let request = GenerateOfflineCredentialRequest().with {
       $0.cluster = cluster
     }
@@ -1589,14 +1589,14 @@ extension Clients.EdgeContainerProtocol {
   }
 
   public func listNodePools(request: ListNodePoolsRequest) async throws
-    -> GoogleCloudEdgecontainerV1.ListNodePoolsResponse
+    -> GoogleCloudEdgeContainerV1.ListNodePoolsResponse
   {
     try await self.listNodePools(request: request, options: .init())
   }
 
   public func listNodePools(
     request: ListNodePoolsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.ListNodePoolsResponse {
+  ) async throws -> GoogleCloudEdgeContainerV1.ListNodePoolsResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1610,7 +1610,7 @@ extension Clients.EdgeContainerProtocol {
     byItem: ListNodePoolsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<NodePool, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudEdgecontainerV1.ListNodePoolsResponse in
+      (token: Swift.String) async throws -> GoogleCloudEdgeContainerV1.ListNodePoolsResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
@@ -1626,20 +1626,20 @@ extension Clients.EdgeContainerProtocol {
   }
 
   public func getNodePool(request: GetNodePoolRequest) async throws
-    -> GoogleCloudEdgecontainerV1.NodePool
+    -> GoogleCloudEdgeContainerV1.NodePool
   {
     try await self.getNodePool(request: request, options: .init())
   }
 
   public func getNodePool(
     request: GetNodePoolRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.NodePool {
+  ) async throws -> GoogleCloudEdgeContainerV1.NodePool {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getNodePool(
     name: Swift.String,
-  ) async throws -> GoogleCloudEdgecontainerV1.NodePool {
+  ) async throws -> GoogleCloudEdgeContainerV1.NodePool {
     let request = GetNodePoolRequest().with {
       $0.name = name
     }
@@ -1764,14 +1764,14 @@ extension Clients.EdgeContainerProtocol {
   }
 
   public func listMachines(request: ListMachinesRequest) async throws
-    -> GoogleCloudEdgecontainerV1.ListMachinesResponse
+    -> GoogleCloudEdgeContainerV1.ListMachinesResponse
   {
     try await self.listMachines(request: request, options: .init())
   }
 
   public func listMachines(
     request: ListMachinesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.ListMachinesResponse {
+  ) async throws -> GoogleCloudEdgeContainerV1.ListMachinesResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1785,7 +1785,7 @@ extension Clients.EdgeContainerProtocol {
     byItem: ListMachinesRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Machine, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudEdgecontainerV1.ListMachinesResponse in
+      (token: Swift.String) async throws -> GoogleCloudEdgeContainerV1.ListMachinesResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
@@ -1801,20 +1801,20 @@ extension Clients.EdgeContainerProtocol {
   }
 
   public func getMachine(request: GetMachineRequest) async throws
-    -> GoogleCloudEdgecontainerV1.Machine
+    -> GoogleCloudEdgeContainerV1.Machine
   {
     try await self.getMachine(request: request, options: .init())
   }
 
   public func getMachine(
     request: GetMachineRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.Machine {
+  ) async throws -> GoogleCloudEdgeContainerV1.Machine {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getMachine(
     name: Swift.String,
-  ) async throws -> GoogleCloudEdgecontainerV1.Machine {
+  ) async throws -> GoogleCloudEdgeContainerV1.Machine {
     let request = GetMachineRequest().with {
       $0.name = name
     }
@@ -1822,14 +1822,14 @@ extension Clients.EdgeContainerProtocol {
   }
 
   public func listVpnConnections(request: ListVpnConnectionsRequest) async throws
-    -> GoogleCloudEdgecontainerV1.ListVpnConnectionsResponse
+    -> GoogleCloudEdgeContainerV1.ListVpnConnectionsResponse
   {
     try await self.listVpnConnections(request: request, options: .init())
   }
 
   public func listVpnConnections(
     request: ListVpnConnectionsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.ListVpnConnectionsResponse {
+  ) async throws -> GoogleCloudEdgeContainerV1.ListVpnConnectionsResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1843,7 +1843,7 @@ extension Clients.EdgeContainerProtocol {
     byItem: ListVpnConnectionsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<VpnConnection, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudEdgecontainerV1.ListVpnConnectionsResponse in
+      (token: Swift.String) async throws -> GoogleCloudEdgeContainerV1.ListVpnConnectionsResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
@@ -1859,20 +1859,20 @@ extension Clients.EdgeContainerProtocol {
   }
 
   public func getVpnConnection(request: GetVpnConnectionRequest) async throws
-    -> GoogleCloudEdgecontainerV1.VpnConnection
+    -> GoogleCloudEdgeContainerV1.VpnConnection
   {
     try await self.getVpnConnection(request: request, options: .init())
   }
 
   public func getVpnConnection(
     request: GetVpnConnectionRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.VpnConnection {
+  ) async throws -> GoogleCloudEdgeContainerV1.VpnConnection {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getVpnConnection(
     name: Swift.String,
-  ) async throws -> GoogleCloudEdgecontainerV1.VpnConnection {
+  ) async throws -> GoogleCloudEdgeContainerV1.VpnConnection {
     let request = GetVpnConnectionRequest().with {
       $0.name = name
     }
@@ -1958,20 +1958,20 @@ extension Clients.EdgeContainerProtocol {
   }
 
   public func getServerConfig(request: GetServerConfigRequest) async throws
-    -> GoogleCloudEdgecontainerV1.ServerConfig
+    -> GoogleCloudEdgeContainerV1.ServerConfig
   {
     try await self.getServerConfig(request: request, options: .init())
   }
 
   public func getServerConfig(
     request: GetServerConfigRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudEdgecontainerV1.ServerConfig {
+  ) async throws -> GoogleCloudEdgeContainerV1.ServerConfig {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getServerConfig(
     name: Swift.String,
-  ) async throws -> GoogleCloudEdgecontainerV1.ServerConfig {
+  ) async throws -> GoogleCloudEdgeContainerV1.ServerConfig {
     let request = GetServerConfigRequest().with {
       $0.name = name
     }
